@@ -148,7 +148,7 @@ p{
 }
 
 .song-image-holder{
-    width: max-content;
+    width: 90%;
     height: 80%;
     align-self: center;
     margin-bottom: 0.5rem;
