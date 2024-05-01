@@ -9,6 +9,7 @@ Music Player Created with plain HTML/CSS/JS
 ## Features
 
 - Light/dark mode toggle
+- Filter by genre
 - Prev/Next functionality
 - Supports playlist creation
 
