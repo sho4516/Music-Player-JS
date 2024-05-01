@@ -1,0 +1,292 @@
+p{
+    margin: 0;
+    padding: 0;
+}
+.heading-title{
+    text-align: center;
+}
+
+.heading-title h1{
+    user-select: none;
+    font-weight: 900;
+}
+
+.toggle-button{
+    display: flex;
+    justify-content: end;
+}
+
+/* Hide the checkbox */
+.toggle-input {
+    display: none;
+}
+
+.toggle-text{
+    user-select: none;
+}
+
+/* Style the label as the button */
+.toggle-label {
+    display: inline-block;
+    width: 70px; /* Adjust width as needed */
+    height: 30px; /* Adjust height as needed */
+    background-color: #ccc; /* Default background color */
+    border-radius: 15px; /* Make it rounded */
+    cursor: pointer; /* Show pointer cursor */
+    position: relative;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.toggle-text-direction{
+    flex-direction: row-reverse;
+}
+
+/* Style the toggle indicator */
+.toggle-label::after {
+    content: '';
+    width: 26px; /* Width of the indicator */
+    height: 26px; /* Height of the indicator */
+    background-color: white; /* Indicator color */
+    border-radius: 50%; /* Make it a circle */
+    position: absolute;
+    top: 7px;
+    left: 2px;
+    transition: transform 0.3s ease,background-color 0.5s ease-in-out; /* Smooth transition */
+}
+
+.toggle-label:hover::after {
+    background-color: black;
+}
+
+/* Adjust the indicator position when the checkbox is checked */
+.toggle-input:checked + .toggle-label::after {
+    transform: translateX(50px); /* Adjust the distance */
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+}
+
+.all-song{
+    width: 25%;
+    height: max-content;
+    margin-right: 1rem;
+    padding: 1rem;
+    background-color: #6bb8de;
+    border-radius: 10px;
+}
+
+.genre p{
+    display: inline-block;
+    margin-right: 1.5rem;
+}
+
+.selectedGenre{
+    background-color: darkgray;
+    padding: 2px;
+    border-radius: 15px;
+    cursor: pointer;
+    width: 150px;
+    direction: bottom;
+}
+
+.all-song-list{
+    display: flex;
+    flex-direction: column;
+}
+
+.all-song-list-item, .play-list-item{
+    width: auto;
+    border-radius: 5px;
+    background-color: #0d81bc;
+    cursor: pointer !important;
+    margin-bottom: 0.5rem;
+    padding: 5px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    text-transform: capitalize;
+}
+
+.all-song-list-item:hover, .play-list-item:hover{
+    background-color: #013047;
+    color: white;
+}
+
+.all-song-list-item p{
+   user-select: none;
+}
+
+.card{
+    width: 40%;
+    height: max-content;
+    margin-right: 1rem;
+    padding: 1rem;
+    background-color: #6bb8de;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.song-card{
+    border-radius: 10px;
+    width: 80%;
+    height: 300px;
+    background-color: #0d81bc;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    position: relative;
+}
+
+.song-image-holder{
+    width: max-content;
+    height: 80%;
+    align-self: center;
+    margin-bottom: 0.5rem;
+}
+
+.song-image-holder img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.song-card .song-name {
+    margin-bottom: 0.3rem;
+}
+
+.song-card .song-name p{
+    font-size: 1.4rem;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+.song-card .artist-name p{
+    font-size: 1rem;
+    text-transform: capitalize;
+}
+
+.card > div:nth-child(2){
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1rem;
+}
+
+.song-audio-bar{
+    width: 80%;
+    position: relative;
+    margin: auto;
+}
+
+.music-controls, .playlist-button{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.music-controls{
+    margin-bottom: 1rem;
+}
+
+#nextBtn, #prevBtn, #playlistBtn, #addToPlaylistBtn{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: nowrap;
+    padding: 10px;
+    margin-left: 1rem;
+    width: 75px;
+    border: none;
+    background-color: #0d81bc;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    color: wheat;
+}
+
+#playlistBtn{
+    width: 150px;
+}
+
+#addToPlaylistBtn{
+    width: max-content;
+}
+
+#nextBtn:disabled, #prevBtn:disabled {
+    color: #666; /* Grey color for text */
+    background-color: #ccc; /* Grey color for background */
+    cursor: not-allowed; /* Change cursor to indicate non-interactivity */
+}
+
+#nextBtn:not(:disabled):hover, #prevBtn:not(:disabled):hover{
+    background-color: #013047;
+}
+
+#playlistBtn:hover, #addToPlaylistBtn:hover{
+    background-color: #013047;
+}
+
+.playlist{
+    width: 35%;
+    height: max-content;
+    padding: 1rem;
+    background-color: #6bb8de;
+    border-radius: 10px;
+}
+
+.add-to-playlist{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+#addToPlaylistInput{
+    border: none;
+    padding: 5px;
+    background-color: darkgray;
+    color: black;
+    font-size: 1rem;
+    user-select: none;
+}
+
+
+
+
+
+
+
+/* ------------------------------------------------------ */
+.dark-mode {
+    background-color: #253238;
+}
+
+.dark-mode .song-card {
+    background-color: #63696d;
+}
+
+.dark-mode .all-song-list-item {
+    background-color: #63696d;
+}
+
+.light-mode {
+    background-color: #6bb8de;
+}
+
+.light-mode .song-card {
+    background-color: #0d81bc;
+}
+
+.light-mode .all-song-list-item {
+    background-color: #0d81bc;
+}

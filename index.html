@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://kit.fontawesome.com/46fc34228e.js" crossorigin="anonymous"></script>
+    <title>Music Please</title>
+</head>
+<body>
+    <div class="heading">
+        <div class="toggle-button">
+            <input type="checkbox" id="toggle" class="toggle-input">
+            <label for="toggle" class="toggle-label toggle-text-direction">
+                <span class="toggle-text">Dark</span>
+            </label>
+        </div>
+        <div class="heading-title">
+            <h1>Music Player - By Shobhit Goyal</h1>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="all-song">
+            <div class="genre">
+                <p style="user-select: none;">Filter by Genre: </p>
+                <select class="selectedGenre">
+                    <option selected>All</option>
+                </select>
+            </div>
+
+            <div class="all-song-heading">
+                <h2>All Songs</h2>
+            </div>
+
+            <div class="all-song-list">
+            </div>
+        </div>
+
+
+        <div class="card"></div>
+        
+        <div class="playlist">
+            <div class ="add-to-playlist">
+                <input type="text" id="addToPlaylistInput" placeholder="Enter Playlist Name">
+                <button type="button" id="addToPlaylistBtn">Add To Playlist</button>
+            </div>
+            <div class="current-playlist">
+                <h3>Current Playlist</h3>
+            </div>
+            <div class="my-playlists">
+                <h3>My Playlist</h3>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
