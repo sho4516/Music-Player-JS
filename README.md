@@ -27,5 +27,7 @@ https://sho4516.github.io/Music-Player-JS/
 
 - [Shobhit Goyal](https://github.com/sho4516)
 
+###### PS - Please use this on laptop/tablet as this needs to be adjusted for smaller screens like mobile devices.
+
 
 
